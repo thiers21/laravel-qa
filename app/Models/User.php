@@ -22,6 +22,15 @@ class User extends Authenticatable
         'password',
     ];
 
+
+    public function questions()
+    {
+        return $this->hasMany('App\Models\Question');
+    }
+    public function getUrlAttribute(){
+        return '#';
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *
